@@ -18,8 +18,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from polls import views
+from polls.views import hello
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.IndexView.as_view(), name="index"),
+    path("", hello, name="index"),
 ]
